@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= content_for(:title) || "Doyle Engler" %></title>
+    <title><%= content_for(:title) || "Thomas Doyle-Engler" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
@@ -26,12 +26,10 @@
   <body>
     <div data-controller="sidebar">
       <%= render 'shared/sidebar' %>
-      <main class="py-10 lg:pl-72">
-        <div class="px-4 sm:px-6 lg:px-8">
+      <main class="lg:pl-72">
           <%= yield %>
-        </div>
+          <%= render 'shared/footer' %>
       </main>
-      <%= render 'shared/footer' %>
     </div>
   </body>
 </html>

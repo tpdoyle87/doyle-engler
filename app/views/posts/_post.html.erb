@@ -3,6 +3,12 @@
     <strong class="block font-medium mb-1">Name:</strong>
     <%= post.name %>
   </p>
+  <% if @post&.thumbnail %>    
+    <p class="my-5">
+      <strong class="block font-medium mb-1">Thumbnail:</strong>
+      <%= image_tag @post.thumbnail, alt: "Thumbnail for #{@post.title}" %>
+    </p>
+  <% end %>
 
   <p class="my-5">
     <strong class="block font-medium mb-1">Title:</strong>

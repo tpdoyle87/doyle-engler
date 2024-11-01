@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :has_secure_password, only: %i[ create update destroy ]
+  before_action :authenticated?, only: %i[new create update destroy ]
   before_action :set_post, only: %i[ show edit update destroy ]
 
   # GET /posts or /posts.json
@@ -66,6 +66,6 @@ class PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.expect(post: [ :name, :title, :content ])
+      params.expect(post: [ :name, :title, :content, :thumbnail ])
     end
 end

@@ -22,6 +22,11 @@
   </div>
 
   <div class="my-5">
+    <%= form.label :thumbnail, "Thumbnail Image" %>
+    <%= form.file_field :thumbnail %>
+  </div>
+
+  <div class="my-5">
     <%= form.label :content %>
     <%= form.rich_text_area :content, rows: 4, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
