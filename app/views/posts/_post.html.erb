@@ -1,23 +1,14 @@
 <div id="<%= dom_id post %>">
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Name:</strong>
-    <%= post.name %>
-  </p>
-  <% if @post&.thumbnail %>    
-    <p class="my-5">
-      <strong class="block font-medium mb-1">Thumbnail:</strong>
-      <%= image_tag @post.thumbnail, alt: "Thumbnail for #{@post.title}" %>
-    </p>
-  <% end %>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Title:</strong>
+  <h1 class="my-5 text-2">
     <%= post.title %>
+  </h1>
+
+  <p class="my-5">
+    <%= post.content %>
   </p>
 
   <p class="my-5">
-    <strong class="block font-medium mb-1">Content:</strong>
-    <%= post.content %>
+    Author: <%= post.name %> | Published: <%= post.created_at.strftime("%b-%d-%Y") %>
   </p>
 
 </div>

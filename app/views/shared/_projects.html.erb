@@ -2,16 +2,18 @@
   <h2 id="projects" class="mx-8 mt-8 text-4xl">Projects</h2>
   <div class="mx-8 grid lg:grid-cols-3 gap-8 py-8">
     <% projects.each do |project| %>
-      <div class="divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow">
-        <div class="px-4 py-5 sm:px-6">
-          <!-- Content goes here -->
-          <h2>Header</h2>
+      <a href="<%= project.url%>" target="blank">
+        <div class="divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow">
+          <div class="px-4 py-5 sm:px-6">
+            <!-- Content goes here -->
+            <h2><%= project.name %></h2>
+          </div>
+          <div >
+            <!-- Content goes here -->
+            <%=image_tag project.thumbnail, alt: "project image", class: "-z-10 h-full w-full object-cover" %>
+          </div>
         </div>
-        <div class="px-4 py-5 sm:p-6">
-          <!-- Content goes here -->
-          <p>Body</p>
-        </div>
-      </div>
+      </a>
     <% end %>
   </div>
 </div>

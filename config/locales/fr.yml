@@ -1,0 +1,69 @@
+fr:
+  deploy_section:
+    deploy_faster: "Déployez plus rapidement"
+    main_heading: "Présentez votre MVP aux personnes qui comptent"
+    intro_text: "Des lancements rapides de MVP à la scalabilité sans accroc, je me spécialise dans la mise de vos idées entre les mains des utilisateurs potentiels – ceux qui stimulent votre croissance. Chaque déploiement est rationalisé, chaque flux de travail optimisé, garantissant que votre produit atteint le marché de manière efficace."
+    features:
+      rapid_deployment:
+        title: "Déploiement rapide."
+        description: "Donnez vie à votre MVP rapidement, prêt à capturer les retours d'expérience et à évoluer en fonction de l'utilisation réelle."
+      big_data_ml:
+        title: "Expertise en Big Data & Machine Learning."
+        description: "Exploitez des insights et des fonctionnalités basées sur les données pour affiner et faire évoluer votre produit d'une manière qui vous distingue."
+      support_scaling:
+        title: "Support fiable et évolutif."
+        description: "Concentrez-vous sur la réalisation de votre vision pendant que je veille à ce que vos systèmes soient robustes, évolutifs et prêts à gérer la croissance."
+    results_heading: "Pas de barrières, seulement des résultats."
+    results_text: "Que vous soyez sur serveur ou sans serveur, je gère les complexités pour que vous puissiez vous concentrer sur l'essentiel : accroître votre impact et atteindre les étapes qui font progresser votre entreprise."
+  contact_section:
+    get_in_touch: "Contactez-moi"
+    intro_text: "Que vous souhaitiez créer un MVP, améliorer un produit existant ou obtenir des conseils sur l'IA, je suis là pour vous aider. Connectons-nous et voyons comment nous pouvons concrétiser votre vision – contactez-moi dès aujourd'hui !"
+    address: "Adresse"
+    address_value: "10030 Sunnifa Aly\nOrlando, FL 32832"
+    telephone: "Téléphone"
+    phone_value: "+1 (607) 287-5262"
+    email: "Email"
+    email_value: "tpdoyle87@gmail.com"
+    form:
+      first_name: "Prénom"
+      last_name: "Nom"
+      email: "Email"
+      phone_number: "Numéro de téléphone"
+      message: "Message"
+      submit: "Envoyer le message"
+  promo_section:
+    tagline: "Votre succès, dès le MVP"
+    heading: "Construisons l'avenir ensemble"
+    description: "Du MVP à votre prochain grand objectif, je vous apporte l'expertise et le soutien dont vous avez besoin pour atteindre chaque étape. Que vous développiez des systèmes évolutifs, intégriez le big data ou innoviez en IA, je suis là pour transformer votre vision en réalité."
+    cta: "Contactez-moi dès aujourd'hui"
+  footer:
+    social:
+      x: "X"
+      github: "GitHub"
+    copyright: "Doyle-Engler LLC. Tous droits réservés."
+  blog_section:
+    heading: "Du blog"
+    thumbnail_alt: "Photo miniature pour l'article de blog"
+    founder_alt: "Fondateur Thomas Doyle-Engler"
+  sidebar:
+    close: "Fermer le menu"
+    open: "Ouvrir le menu"
+    dashboard: "Tableau de bord"
+    menu:
+      home: "Accueil"
+      projects: "Projets"
+      about: "À propos"
+      contact: "Contact"
+      blog: "Blog"
+  team_section:
+    heading: "Notre équipe"
+    description: "Je suis un développeur dévoué, passionné par la fourniture de solutions backend et frontend de haute qualité avec une expertise en déploiement rapide et en CI/CD pour garantir le succès de votre projet."
+    founder_alt: "Fondateur Thomas Doyle-Engler"
+    role: "Fondateur/Ingénieur"
+    social:
+      x: "X"
+      linkedin: "LinkedIn"
+  hero_section:
+    heading: "Donnons vie à votre prochaine grande idée"
+    subheading: "MVPs, solutions personnalisées et itérations IA – conçues avec précision et rapidité."
+    cta: "Contactez-moi"

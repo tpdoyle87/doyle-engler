@@ -1,31 +1,70 @@
-# Files in the config/locales directory are used for internationalization and
-# are automatically loaded by Rails. If you want to use locales other than
-# English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t "hello"
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t("hello") %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more about the API, please read the Rails Internationalization guide
-# at https://guides.rubyonrails.org/i18n.html.
-#
-# Be aware that YAML interprets the following case-insensitive strings as
-# booleans: `true`, `false`, `on`, `off`, `yes`, `no`. Therefore, these strings
-# must be quoted to be interpreted as strings. For example:
-#
-#     en:
-#       "yes": yup
-#       enabled: "ON"
-
 en:
-  hello: "Hello world"
+  deploy_section:
+    deploy_faster: "Deploy faster"
+    main_heading: "Get Your MVP in Front of the People Who Matter"
+    intro_text: "From fast MVP launches to seamless scalability, I specialize in getting your ideas into the hands of potential users – the ones who drive your growth. Every deployment is streamlined, every workflow optimized, ensuring your product reaches the market efficiently and effectively."
+    features:
+      rapid_deployment:
+        title: "Rapid Deployment."
+        description: "Bring your MVP to life quickly, ready to capture feedback and iterate based on real-world use."
+      big_data_ml:
+        title: "Big Data & Machine Learning Expertise."
+        description: "Harness insights and data-driven features to refine and evolve your product in ways that set you apart."
+      support_scaling:
+        title: "Reliable Support & Scaling."
+        description: "Focus on building your vision while I ensure your systems are robust, scalable, and ready to handle growth."
+    results_heading: "No barriers, just results."
+    results_text: "Whether you’re server-based or serverless, I handle the complexities so you can focus on what matters: growing your impact and achieving the milestones that move your business forward."
+  contact_section:
+    get_in_touch: "Get in touch"
+    intro_text: "Whether you're looking to build an MVP, refine an existing product, or need guidance on AI, I'm here to help. Let's connect and explore how we can bring your vision to life—reach out today!"
+    address: "Address"
+    address_value: "10030 Sunnifa Aly\nOrlando, FL 32832"
+    telephone: "Telephone"
+    phone_value: "+1 (607) 287-5262"
+    email: "Email"
+    email_value: "tpdoyle87@gmail.com"
+    form:
+      first_name: "First name"
+      last_name: "Last name"
+      email: "Email"
+      phone_number: "Phone number"
+      message: "Message"
+      submit: "Send message"
+  promo_section:
+    tagline: "Your Success, From MVP"
+    heading: "Let’s Build the Future Together"
+    description: "From MVP to your next big milestone, I provide the expertise and support you need to reach every goal. Whether you’re scaling systems, integrating big data, or driving AI innovations, I’m here to turn your vision into reality."
+    cta: "Get in touch today"
+  footer:
+    social:
+      x: "X"
+      github: "GitHub"
+    copyright: "Doyle-Engler LLC. All rights reserved."
+  blog_section:
+    heading: "From the blog"
+    thumbnail_alt: "Thumbnail photo for blog post"
+    founder_alt: "Founder Thomas Doyle-Engler"
+  sidebar:
+    close: "Close sidebar"
+    open: "Open sidebar"
+    dashboard: "Dashboard"
+    menu:
+      home: "Home"
+      projects: "Projects"
+      about: "About"
+      contact: "Contact"
+      blog: "Blog"
+  team_section:
+    heading: "Our team"
+    description: "I’m a dedicated developer, passionate about delivering high-quality backend and frontend solutions with rapid deployment and CI/CD expertise to drive your project’s success."
+    founder_alt: "Founder Thomas Doyle-Engler"
+    role: "Founder/Engineer"
+    social:
+      x: "X"
+      linkedin: "LinkedIn"
+  hero_section:
+    heading: "Let’s Bring Your Next Big Idea to Life"
+    subheading: "MVPs, custom builds, and AI iterations – crafted with precision and speed."
+    cta: "Get in touch"
+
