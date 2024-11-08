@@ -1,7 +1,12 @@
 class ProjectsController < ApplicationController
+  skip_before_action :require_authentication
   before_action :authenticated?, only: %i[new create update ]
   def index
     @projects = Project.all
+  end
+
+  def show
+    @project = Project.find(params[:id])
   end
 
   def new

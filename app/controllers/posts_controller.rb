@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
-  # before_action :authenticated?, only: %i[new create update destroy ]
+  before_action :authenticated?, only: %i[new create update destroy ]
+  skip_before_action :require_authentication
   before_action :set_post, only: %i[ show edit update destroy ]
 
   # GET /posts or /posts.json
