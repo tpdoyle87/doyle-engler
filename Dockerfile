@@ -62,11 +62,11 @@ COPY --from=build /rails /rails
 RUN groupadd --system --gid 1000 rails && \
     mkdir -p /data && \
     useradd rails --uid 1000 --gid 1000 --create-home --shell /bin/bash && \
-    chown -R rails:rails db log storage tmp /data
+    chown -R rails:rails db log storage tmp /doyleengler
 USER 1000:1000
 
 # Entrypoint prepares the database.
-ENV DATABASE_URL="sqlite3:/data/production.sqlite3"
+ENV DATABASE_URL="sqlite3:/doyleengler/production.sqlite3"
 ENTRYPOINT ["/rails/bin/docker-entrypoint"]
 
 # Start server via Thruster by default, this can be overwritten at runtime
