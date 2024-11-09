@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  skip_before_action :require_authentication
+  skip_before_action :require_authentication, except: %i[new create update]
   before_action :authenticated?, only: %i[new create update ]
   def index
     @projects = Project.all
