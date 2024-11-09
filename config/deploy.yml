@@ -63,6 +63,7 @@ aliases:
 # Recommended to change this to a mounted volume path that is backed up off server.
 volumes:
   - "app_storage:/rails/doyle_data"
+  - "app_storage:/rails/storage"
 
 
 # Bridge fingerprinted assets, like JS and CSS, between versions to avoid
