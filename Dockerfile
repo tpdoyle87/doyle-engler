@@ -54,24 +54,28 @@ RUN SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile
 # Final stage for app image
 FROM base
 
-# Copy built artifacts: gems, application
+# Copy files from build stage
 COPY --from=build "${BUNDLE_PATH}" "${BUNDLE_PATH}"
 COPY --from=build /rails /rails
 
-# Run and own only the runtime files as a non-root user for security
+# Set up non-root user
 RUN useradd rails --create-home --shell /bin/bash && \
-    mkdir -p /data && \
-    chown -R rails:rails db log storage tmp /data
+    mkdir -p /data db log storage tmp && \
+    chown -R rails:rails /data db log storage tmp /rails "${BUNDLE_PATH}"
+
+# Switch to non-root user
 USER rails:rails
 
-# Entrypoint prepares the database.
+# Set environment variables
 ENV DATABASE_URL="sqlite3:/data/doyel_production.sqlite3"
 ENV DATABASE_CACHE="sqlite3:/data/doyle_production_cache.sqlite3"
 ENV DATABASE_QUEUE="sqlite3:/data/doyle_production_queue.sqlite3"
 ENV DATABASE_CABLE="sqlite3:/data/doyle_production_cable.sqlite3"
+
+# Entrypoint script
 ENTRYPOINT ["/rails/bin/docker-entrypoint"]
 
-# Start server via Thruster by default, this can be overwritten at runtime
+# Expose port and command
 EXPOSE 3001
 CMD ["./bin/rails", "server", "-p", "3001"]
-# CMD ["./bin/thrust", "./bin/rails", "server", "-p", "3001"]
+
