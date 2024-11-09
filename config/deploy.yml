@@ -62,7 +62,6 @@ aliases:
 # Use a persistent storage volume for sqlite database files and local Active Storage files.
 # Recommended to change this to a mounted volume path that is backed up off server.
 volumes:
-  - "app_storage:/rails/storage"
   - "app_storage:/rails/doyle_data"
 
 

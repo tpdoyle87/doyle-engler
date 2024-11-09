@@ -67,6 +67,9 @@ USER 1000:1000
 
 # Entrypoint prepares the database.
 ENV DATABASE_URL="sqlite3:/doyle_data/production.sqlite3"
+ENV DATABASE_CACHE="sqlite3:/doyle_data/production_cache.sqlite3"
+ENV DATABASE_QUEUE="sqlite3:/doyle_data/production_queue.sqlite3"
+ENV DATABASE_CABLE="sqlite3:/doyle_data/production_cable.sqlite3"
 ENTRYPOINT ["/rails/bin/docker-entrypoint"]
 
 # Start server via Thruster by default, this can be overwritten at runtime
