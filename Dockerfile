@@ -59,7 +59,7 @@ COPY --from=build "${BUNDLE_PATH}" "${BUNDLE_PATH}"
 COPY --from=build /rails /rails
 
 # Run and own only the runtime files as a non-root user for security
-RUN groupadd --system --gid 1000 rails && \
+RUN useradd rails --create-home --shell /bin/bash && \
     mkdir -p /data && \
     chown -R rails:rails db log storage tmp /data
 USER rails:rails
