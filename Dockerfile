@@ -66,7 +66,7 @@ RUN groupadd --system --gid 1000 rails && \
 USER 1000:1000
 
 # Entrypoint prepares the database.
-ENV DATABASE_URL="sqlite3:/storage/production.sqlite3"
+ENV DATABASE_URL="sqlite3:/doyle_data/production.sqlite3"
 ENTRYPOINT ["/rails/bin/docker-entrypoint"]
 
 # Start server via Thruster by default, this can be overwritten at runtime
