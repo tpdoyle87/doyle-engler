@@ -60,16 +60,16 @@ COPY --from=build /rails /rails
 
 # Run and own only the runtime files as a non-root user for security
 RUN groupadd --system --gid 1000 rails && \
-    mkdir -p /doyle_data && \
+    mkdir -p /data && \
     useradd rails --uid 1000 --gid 1000 --create-home --shell /bin/bash && \
-    chown -R rails:rails db log storage tmp /doyle_data
+    chown -R rails:rails db log storage tmp /data
 USER 1000:1000
 
 # Entrypoint prepares the database.
-ENV DATABASE_URL="sqlite3:/doyle_data/production.sqlite3"
-ENV DATABASE_CACHE="sqlite3:/doyle_data/production_cache.sqlite3"
-ENV DATABASE_QUEUE="sqlite3:/doyle_data/production_queue.sqlite3"
-ENV DATABASE_CABLE="sqlite3:/doyle_data/production_cable.sqlite3"
+ENV DATABASE_URL="sqlite3:/data/doyel_production.sqlite3"
+ENV DATABASE_CACHE="sqlite3:/data/doyle_production_cache.sqlite3"
+ENV DATABASE_QUEUE="sqlite3:/data/doyle_production_queue.sqlite3"
+ENV DATABASE_CABLE="sqlite3:/data/doyle_production_cable.sqlite3"
 ENTRYPOINT ["/rails/bin/docker-entrypoint"]
 
 # Start server via Thruster by default, this can be overwritten at runtime
