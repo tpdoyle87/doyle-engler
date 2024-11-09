@@ -8,6 +8,9 @@ export default class extends Controller {
   }
 
   open() {
+    const backdrop = document.getElementById("backdrop")
+    backdrop.classList.remove("z-40")
+    backdrop.classList.add("z-50")
     this.mobileTarget.classList.remove("hidden");
     this.menuTarget.classList.remove("-translate-x-full");
     this.menuTarget.classList.add("translate-x-0");
@@ -16,6 +19,9 @@ export default class extends Controller {
   }
 
   close() {
+    const backdrop = document.getElementById("backdrop")
+    backdrop.classList.remove("z-50")
+    backdrop.classList.add("z-40")
     this.mobileTarget.classList.add("hidden");
     this.menuTarget.classList.remove("translate-x-0");
     this.menuTarget.classList.add("-translate-x-full");
